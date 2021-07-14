@@ -11,7 +11,6 @@
     
     <div class="login-mobile">
           <a href="{{route('user.login')}}" class="login"><i class="ft-user"></i> الدخول</a>
-          <a href="{{route('user.register')}}" class="btn btn-primary register"><i class="ft-plus-circle"></i> أنشئ حسابك</a>
     </div> 
     @endif 
 

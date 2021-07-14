@@ -15,9 +15,7 @@
         "hansschouten/phpagebuilder": "^0.19.0",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "2.4",
-        "spatie/laravel-analytics": "^3.11",
-        "spatie/laravel-multitenancy": "1.0"
+        "laravel/ui": "2.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

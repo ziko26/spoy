@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="brand-info">
-                        <img src="{{asset('images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
+                        <img src="{{asset('public/images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
                         <h2>{{$brand->name}}</h2>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="carousel-inner">
                    @foreach($images as $image)
                     <div class="carousel-item @if($loop->first) active @endif">
-                    <img class="card-img-top" src="{{asset('images/user/items/'.$image)}}" alt="First slide">
+                    <img class="card-img-top" src="{{asset('public/images/user/items/'.$image)}}" alt="First slide">
                     </div>
                     @endforeach   
                 </div>
@@ -76,7 +76,7 @@
                 </a>
             </div>
             @else
-            <img class="card-img-top" style="max-height:300px" src="{{asset('images/user/items/'.$item->image)}}" alt="{{$brand->name}}">
+            <img class="card-img-top" style="max-height:300px" src="{{asset('public/images/user/items/'.$item->image)}}" alt="{{$brand->name}}">
             @endif
             
                 <div class="card-body">

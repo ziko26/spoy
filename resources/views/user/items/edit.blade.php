@@ -46,7 +46,7 @@
                               $images = explode ("|", $item->image);
                           @endphp
                           @foreach($images as $img)
-                            <img width="200" height="200" src="{{asset('images/user/items/'.$img)}}" alt="{{$item->name}}">
+                            <img width="200" height="200" src="{{asset('public/images/user/items/'.$img)}}" alt="{{$item->name}}">
                           @endforeach
                             </div>
                             <div class="form-group">

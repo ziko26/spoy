@@ -46,7 +46,7 @@
                         <div class="row">
                           <div class="col-md-12">
                           <div class="form-group">
-                            <img width="200" height="200" src="{{asset('images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
+                            <img width="200" height="200" src="{{asset('public/images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
                             </div>
                             <div class="form-group">
                                 <input type="file"  name="image" class="form-control">

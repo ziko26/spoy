@@ -35,7 +35,7 @@
                           <div class="col-md-12">
                             <div class="form-group">
                             @if(isset($category->image))
-                            <img width="200" height="200" src="{{asset('images/admin/categories/'.$category->image)}}" alt="{{$category->name}}">
+                            <img width="200" height="200" src="{{asset('public/images/admin/categories/'.$category->image)}}" alt="{{$category->name}}">
                             @endif
                               <input type="file" name="image" accept="image/png, image/jpg, image/jpeg" value="{{$category->image}}" class="form-control">
                               @error('image')

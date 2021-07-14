@@ -25,9 +25,9 @@
                       <tr>                       
                           <td>
                             @if(isset($category->image))
-                            <img width="50" height="50" src="{{asset('images/admin/categories/'.$category->image)}}" alt="{{$category->name}}">
+                            <img width="50" height="50" src="{{asset('public/images/admin/categories/'.$category->image)}}" alt="{{$category->name}}">
                             @else
-                            <img width="50" height="50" src="{{asset('images/default.jpg')}}" alt="{{$category->name}}">
+                            <img width="50" height="50" src="{{asset('public/images/default.jpg')}}" alt="{{$category->name}}">
                             @endif
                           </td>
                           <td>{{$category->name}}</td>

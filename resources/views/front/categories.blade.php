@@ -15,7 +15,7 @@
         <div class="col-sm-6 col-md-4">
         <a href="{{route('front.brand', $brand->slug)}}">
         <div class="card">
-            <img class="card-img-top" src="{{asset('images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
+            <img class="card-img-top" src="{{asset('public/images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
             <div class="card-body">
             <h3 class="text-center">{{$brand->name}}</h3>
             <div class="d-flex justify-content-center align-items-center info">

@@ -34,7 +34,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             @if(isset(Auth::user()->brand->id))
                             <a class="dropdown-item" target="_blank" href="{{route('front.brand',  Auth::user()->brand->slug)}}">
-                            <img width='30' height='30'  src="{{asset('images/user/brand/'.Auth::user()->brand->image)}}">
+                            <img width='30' height='30'  src="{{asset('public/images/user/brand/'.Auth::user()->brand->image)}}">
                              {{Auth::user()->brand->name}}
                             </a>
                             <div class="dropdown-divider"></div>

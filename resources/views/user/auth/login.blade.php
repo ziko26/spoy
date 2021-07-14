@@ -8,7 +8,7 @@
                             <div class="card-header border-0">
                                 <div class="card-title text-center">
                                     <div class="p-1">
-                                        <a href="{{route('front.index')}}"><img src="assets/front/images/logo.png" alt="LOGO"/></a>
+                                        <a href="{{route('front.index')}}"><img style="max-width: 100px;" src="{{asset('public/images/logo.png')}}"/></a>
                                     </div>
                                 </div>
                                 <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
@@ -60,7 +60,7 @@
                                                 </fieldset>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-info btn-lg btn-block"><i
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block"><i
                                                 class="ft-unlock"></i>
                                                 الدخول
                                         </button>

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description"
-          content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+          content="spoy موقع مغربي للبحث عن المركات و المحلات التجارية، كما أنها تتيح لصاحب المحل عرض سلعته ومعلومات عن نشاطه التجاري ليتمكن زبنائه العثور عليه بسهولة.">
     <meta name="keywords"
-          content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
-    <meta name="author" content="PIXINVENT">
+          content="بيع، المنتوجات، العلامات التجارية، المحلات.">
+    <meta name="author" content="Zakaria bouhanda">
     <title>@yield('title')</title>
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->

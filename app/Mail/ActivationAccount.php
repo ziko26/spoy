@@ -32,7 +32,7 @@ class ActivationAccount extends Mailable
      */
     public function build()
     {
-        return $this->from('support@ecolik.shop')
+        return $this->from('support@spoy.ma')
         ->markdown('user.emails.activate_user_account');
     }
 }

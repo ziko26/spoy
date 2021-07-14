@@ -14,10 +14,10 @@
     <!-- BEGIN Custom CSS-->
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
           rel="stylesheet">
-          <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/fonts/simple-line-icons/style.css')}}">
-          <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/fonts/feather/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/front.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('public/assets/admin/fonts/simple-line-icons/style.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('public/assets/admin/fonts/feather/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/css/front.css')}}">
     <!-- END Custom CSS-->
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
     <style>
@@ -32,9 +32,9 @@
 @yield('content')
 @include('front.includes.footer')
 
-<script src="{{asset('js/jQuery.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/front.js')}}" type="text/javascript"></script>
+<script src="{{asset('public/js/jQuery.js')}}" type="text/javascript"></script>
+<script src="{{asset('public/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('public/js/front.js')}}" type="text/javascript"></script>
 
 <script>
 </script>

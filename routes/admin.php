@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| admin Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register admin routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "admin" middleware group. Now create something great!
+|
+*/
+Route::group(['namespace' => 'Admin','middleware' => 'auth:admin'], function(){
+
+     // dashboard route
+     Route::get('/administration', 'AdminController@index')->name('admin.dashboard');
+
+     // Categories routes
+     Route::get('administration/categories', 'CategoryController@index')->name('admin.categories');
+     Route::get('/administration/categories/create', 'CategoryController@create')->name('admin.categories.create');
+     Route::post('/administration/categories/store', 'CategoryController@store')->name('admin.categories.store');
+     Route::get('/administration/categories/edit/{id}', 'CategoryController@edit')->name('admin.categories.edit');
+     Route::post('/administration/categories/update/{id}', 'CategoryController@update')->name('admin.categories.update');
+     Route::get('/administration/categories/delete/{id}', 'CategoryController@delete')->name('admin.categories.delete');
+
+     // cities routes
+       Route::get('administration/cities', 'CitiesController@index')->name('admin.cities');
+       Route::get('/administration/cities/create', 'CitiesController@create')->name('admin.cities.create');
+       Route::post('/administration/cities/store', 'CitiesController@store')->name('admin.cities.store');
+       Route::get('/administration/cities/edit/{id}', 'CitiesController@edit')->name('admin.cities.edit');
+       Route::post('/administration/cities/update/{id}', 'CitiesController@update')->name('admin.cities.update');
+       Route::get('/administration/cities/delete/{id}', 'CitiesController@delete')->name('admin.cities.delete');
+
+     // logout route
+     Route::get('administration/logout', 'AdminController@adminLogout')->name('admin.logout');
+});
+
+Route::group(['namespace' => 'Admin' ,'middleware' => 'guest:admin'], function(){
+    Route::get('/administration/login', 'AdminController@showLogin')->name('show.admin.login');
+    Route::post('/administration/login', 'AdminController@login')->name('admin.login');
+
+});

@@ -1,0 +1,57 @@
+/* Custome style dashboard for users */
+html body{background-color: #fef6ff;}
+.header-navbar{
+    background: #666EE8 !important;
+}
+.main-menu.menu-light .navigation > li.open > a{
+    border-right: 4px solid #FFC074;
+}
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content > span.menu-title,
+body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content a.menu-title{
+    background-color: #FFC074;
+    border-color: #FFC074;
+}
+/* start main style */
+.pending{
+    background: #e6cda0;
+    color: #a2731c;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.delevraid{
+    background: #9de29d;
+    color: #095a09;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.canceled{
+    background: #efb5b5;
+    color: #9c1414;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.page-item.active .page-link{
+    background-color: #666EE8;
+    border-color: #666EE8;
+}
+.pagination .page-link{
+    color:#666EE8;
+}
+.register .card-body{
+    padding:0
+}
+.reg{margin-bottom: 15px;}
+.card .card-body .dropdown .send{
+    cursor: pointer;
+}
+.card .card-body .dropdown .send,
+.card .card-body .dropdown .send:hover,
+.card .card-body .dropdown .send:active,
+.card .card-body .dropdown .send:focus{
+    background-color: white;
+    outline: none;
+}
+/* end main style */

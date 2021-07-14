@@ -1,0 +1,238 @@
+*{direction: rtl;}
+body{background-color: #fef6ff;padding-top: 7rem;}
+/* Start navbar section */
+.navbar{
+ -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+ -moz-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+ -o-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+ box-shadow: 0 1px 5px rgba(0,0,0,.5);
+ -webkit-transition: all 0.2s ease-in-out;
+ -moz-transition: all 0.2s ease-in-out;
+ -o-transition: all 0.2s ease-in-out;
+ transition: all 0.2s ease-in-out;
+ padding: 15px;
+ display: flex;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ width:100%;
+ z-index:999;
+background: white;
+text-align: right;
+}
+.navbar-light .navbar-toggler{border-color: white !important;}
+.navbar .navbar-brand img{max-width: 100px;} 
+.navbar-nav .nav-link {font-size: 16px;margin-right: 15px;font-weight: bold;}
+.navbar-light .navbar-nav .nav-link{color:#414042 ;}
+.navbar-nav .active > .nav-link {color: var(--second-color) !important;}
+.navbar-nav > .nav-item > .nav-link:hover{color: var(--second-color);}
+.navbar-toggler:focus{outline: none;}
+.dropdown{margin-right:15px;}
+.dropdown-item:active{background-color: var(--first-color);}
+.dropdown .btn-secondary{background-color: white;}
+.dropdown.show:focus{outline:none;}
+.dropdown.show>.btn-secondary.dropdown-toggle{
+  background-color: white;
+  color:#414042
+}
+.login-desctop a {margin-right: 15px;}
+.login-mobile a{margin-right: 5px;}
+.login-mobile .dashboard{
+    text-decoration: none;
+    color: #414042;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.login-mobile .login,
+.login-desctop .login{
+    color: #565050;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login-desctop .register,
+.login-desctop .register:hover,
+.login-desctop .register:not(:disabled):not(.disabled):active,
+.login-desctop .register:focus,
+.login-mobile .register,
+.login-mobile .register:hover,
+.login-mobile .register:not(:disabled):not(.disabled):active,
+.login-mobile .register:focus{
+    background-color: #666EE8;
+    border-color: #666EE8;
+    outline: none;
+}
+
+/* end navbar section */
+/* start search area */
+.search-area{padding:50px 0 ;background-color: white;}
+.search-area .search-button button,
+.search-area .search-button button:hover,
+.search-area .search-button button:not(:disabled):not(.disabled):active,
+.search-area .search-button button:focus{
+    background-color: #666EE8;
+    border-color: #666EE8;
+    outline: none;
+}
+/* end search area */
+/* start categories area */
+.categories {padding: 50px}
+.categories h2{margin-bottom: 25px;}
+.categories .category{
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgb(51 51 51 / 15%);
+    border-radius: 10px;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.categories .category a{text-decoration:none;display: flex}
+.categories .category img{width: 60px;height: 60px;}
+.categories .category  span{
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+    color : #3c3939;
+}
+/* end categories area */
+/* start brands section */
+.brands{padding: 50px 0;}
+.brands a{text-decoration: none;}
+.brands .card, .item .card{height: 95%;margin-bottom: 20px;}
+.brands .card img{
+    height: 192px;
+    width: 100%;
+    object-fit: cover;
+}
+.brands .card h3{color: #3c3939;font-weight: 500;margin-bottom: 15px;}
+.brands .card .card-body .date{text-align: right;direction: ltr;}
+.brands .card .card-body .city{text-align: left;}
+.brands .card .card-body .date,
+.brands .card .card-body .city{flex:1;color:#4a4646}
+.brands .card .card-body span i{margin-left: 3px;}
+/* end brands section */
+/* start brand section */
+.brand{padding: 50px  0;text-align: right; }
+.brand .about{margin-bottom: 2rem;margin-top: 2rem;}
+.brand .business-card,
+.brand .business-about{background-color: white; margin-bottom: 20px;}
+.brand .business-card .brand-info,
+.brand .business-card .brand-contact,
+.brand .business-about{display: flex;padding: 15px 5px;}
+.brand .business-card .brand-contact ul{margin-top: 1rem;}
+.brand .business-card .brand-contact ul li{margin-bottom: 10px;}
+.brand .business-card .brand-contact ul li .phone{
+    text-decoration: none;
+    color: #212529;
+}
+.brand .business-card .brand-info img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.brand .business-card .brand-info h2{line-height: 3.5;margin-right: 15px;}
+/* end brand section */
+/* start item section */
+.item .card .card-body{text-align: right;}
+.item .card .card-body h3{
+    color: #666EE8;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.item .carousel-control-prev i,
+.item .carousel-control-next i{
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+}
+.item .card .modal-header .close{margin: -1rem -1rem auto -1rem;}
+/* end item section */
+.breadcrumb .breadcrumb-item a{
+    color: #666EE8;
+    text-decoration: none;
+}
+/* Start contact-us section */
+.contact-us{padding: 50px 0;text-align: right;}
+.contact-us .contact-info h1,
+.contact-us .mail h2{
+    color: #666EE8;
+    font-weight: 700;
+    margin: 0 0 15px;
+    font-size: 16px;
+    margin-top:15px;
+    margin-bottom: 25px;
+}
+.contact-us .mail p{
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.contact-us .mail .alert i{margin-right: 6px;}
+.contact-us .mail form input, .contact-us .mail form textarea{
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #dedede;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  color: #666666;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+}
+.mail .form-control:focus {box-shadow: 0 0 0 0.2rem #666EE8;}
+.contact-us .mail form textarea{height: 146px;}
+.contact-us .mail form button{
+  padding: 12px 20px;
+    outline: none;
+    border: none;
+    background:#666EE8;
+    color: white;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+.contact-us .mail form button i{margin-right: 6px;}
+/* end contact-us section */
+/* Start footer section */
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #212529;
+    text-align: right;
+
+}
+.footer h5{color: white;font-weight: 500;margin-bottom: 1rem;font-size: 1rem;}
+.footer ul{padding-right: 0;}
+.footer ul li{margin-bottom: 1rem;font-weight: 500;}
+.footer ul li a:hover{color: white;}
+.footer p{color: rgba(255, 255, 255, 0.7)}
+.footer ul li a{color: rgba(255, 255, 255, 0.7);text-decoration: none;}
+.footer ul li i{margin-left: 8px;}
+.footer .navbar-light .copyrghit{color: white;top:20px;}
+.footer .spoy{color: white; font-size: 25px; text-decoration: none;}
+@media (max-width: 991px){ 
+.brands .card img{height: 250px;}
+}
+@media (max-width: 767px){ 
+.brands .card, .item .card{height: auto;}
+.categories .category a{display: block}
+}
+@media (max-width: 991px){ 
+.login-desctop{display: none;}
+}
+@media(min-width: 991px){
+.login-mobile{display: none;}
+}

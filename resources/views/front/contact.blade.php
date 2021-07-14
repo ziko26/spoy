@@ -37,7 +37,7 @@
             <h2>اترك لنا رسالة</h2>
             <p>لا تتردد في ملء النموذج الخاص بك ، وسنقوم بالرد عليك في أقرب وقت ممكن</p>
             <?php if(isset($success)) {echo $success;} ?>
-            <form class="form-group" id="muForm" method="POST" action="contact">
+            <form class="form-group" id="muForm" method="POST" action="{{route('front.contact')}}">
               <div class="row">
                 <div class="col-md-4">
                   <input class="form-control"  type="text" name="name" id="name" required="required" placeholder="الإسم الكامل">

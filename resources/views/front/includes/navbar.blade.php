@@ -1,7 +1,7 @@
  <!-- start navar -->
  <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light">
   	<div class="container">
-  <a class="navbar-brand" href="{{route('front.index')}}">Spoy</a>
+  <a class="navbar-brand" href="{{route('front.index')}}"><img src="{{asset('public/images/logo.png')}}"></a>
   <!-- start mobile lang -->
   @if(Auth::user() !== null)
     <div class="login-mobile">

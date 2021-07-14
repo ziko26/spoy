@@ -10,6 +10,7 @@
           content="بيع، المنتوجات، العلامات التجارية، المحلات.">
     <meta name="author" content="Zakaria bouhanda">
     <title>@yield('title')</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/images/icon.png')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"

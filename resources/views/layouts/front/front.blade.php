@@ -9,6 +9,7 @@
     <meta name="keywords"
           content="بيع، المنتوجات، العلامات التجارية، المحلات.">
     <meta name="author" content="Zakaria bouhanda">
+    <meta name="google-site-verification" content="HRRVsz5-HS2Vh4w1PlNAOyZ1II3GlUBWZW8MqkC7elI" />
     <title>@yield('title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/images/icon.png')}}">
     <!-- END Page Level CSS-->

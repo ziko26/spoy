@@ -228,7 +228,6 @@ text-align: right;
 }
 @media (max-width: 767px){ 
 .brands .card, .item .card{height: auto;}
-.categories .category a{display: block}
 }
 @media (max-width: 991px){ 
 .login-desctop{display: none;}

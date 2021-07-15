@@ -37,8 +37,6 @@
 <script src="{{asset('public/js/jQuery.js')}}" type="text/javascript"></script>
 <script src="{{asset('public/js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('public/js/front.js')}}" type="text/javascript"></script>
-
-<script>
-</script>
+<script data-ad-client="ca-pub-4285081963680875" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>

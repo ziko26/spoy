@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Item;
+use App\User;
 
 class FrontController extends Controller
 {
@@ -57,7 +58,10 @@ class FrontController extends Controller
     public function categories(Category $category){
         return view('front.categories')->with([
             'category' => $category,
-            'brands' => Brand::where('category_id', '=', $category->id)->get(),
+            'brands' => Brand::whereHas('user', function($q){
+                $q->where('active', '=', 1);
+            })->where('category_id', '=', $category->id)
+                             ->get(),
         ]);
     }
 }

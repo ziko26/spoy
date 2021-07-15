@@ -30,6 +30,9 @@
     </div>
 </div>
 </div>
+<div class="justify-content-center d-flex mt-2">
+                    {{$brands->links()}}
+</div>
 <!-- end brands section -->
 @endsection
 

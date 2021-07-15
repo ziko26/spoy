@@ -11,7 +11,8 @@ class OrdersController extends Controller
 {
     public function index(){
        return view('user.orders.index')->with([
-        'orders' => Order::all()->where('user_id', auth()->id()),
+        'orders' => Order::where('user_id', auth()->id())
+                           ->orderBy('id', 'desc')->get(),
        ]);
     }
 
@@ -19,6 +20,7 @@ class OrdersController extends Controller
         $this->validate($request, [
             'customer_name' => 'required|min:3',
             'customer_phone' => 'required|numeric',
+            'customer_address' => 'required'
 
         ]);
 
@@ -27,6 +29,7 @@ class OrdersController extends Controller
             Order::create([
                 'customer_name' => $request->customer_name,
                 'customer_phone' => $request->customer_phone,
+                'customer_address' => $request->customer_address,
                 'item_id' => $id,
                 'user_id' => $item->user->id
     

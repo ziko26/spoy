@@ -223,6 +223,12 @@ text-align: right;
 .footer ul li i{margin-left: 8px;}
 .footer .navbar-light .copyrghit{color: white;top:20px;}
 .footer .spoy{color: white; font-size: 25px; text-decoration: none;}
+
+.page-item.active .page-link{
+    background-color: #666EE8;
+    border-color: #666EE8
+}
+.page-link{color:#666EE8}
 @media (max-width: 991px){ 
 .brands .card img{height: 250px;}
 }

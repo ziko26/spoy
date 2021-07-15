@@ -98,7 +98,7 @@
                 إحجز الآن
                 </button>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade  @if($errors->all()) show @endif" id="exampleModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" @if($errors->all()) style="padding-right: 17px; display: block;" @endif>
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -109,12 +109,25 @@
                     </div>
                     <div class="modal-body">
                     <form method="post" action="{{route('customer.order', $item->id)}}">
+                        method('POST')
                        @csrf
                         <div class="form-group">
-                        <input class="form-control" type="text" name="customer_name" placeholder="الإسم الكامل">
+                        <input class="form-control" type="text" value="{{ old('customer_name') }}" name="customer_name" placeholder="الإسم الكامل">
+                        @error('customer_name')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
                         </div>
                         <div class="form-group"> 
-                        <input class="form-control" type="tel" name="customer_phone" placeholder="رقم الهاتف">
+                        <input class="form-control" type="tel" value="{{ old('customer_phone') }}" name="customer_phone" placeholder="رقم الهاتف">
+                        @error('customer_phone')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
+                        </div>
+                        <div class="form-group">
+                        <input class="form-control" type="text" value="{{ old('customer_address') }}" name="customer_address" placeholder="العنوان">
+                        @error('customer_address')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
                         </div>
                        
                     </div>
@@ -133,7 +146,7 @@
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade @if($errors->all()) show @endif" id="exampleModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" @if($errors->all()) style="padding-right: 17px; display: block;" @endif>
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -145,11 +158,23 @@
                     <div class="modal-body">
                        <form method="post" action="{{route('customer.order', $item->id)}}">
                        @csrf
-                        <div class="form-group">
-                        <input class="form-control" type="text" name="customer_name" placeholder="الإسم الكامل">
+                       <div class="form-group">
+                        <input class="form-control" type="text" value="{{ old('customer_name') }}" name="customer_name" placeholder="الإسم الكامل">
+                        @error('customer_name')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
+                        </div>
+                        <div class="form-group"> 
+                        <input class="form-control" type="tel" value="{{ old('customer_phone') }}" name="customer_phone" placeholder="رقم الهاتف">
+                        @error('customer_phone')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
                         </div>
                         <div class="form-group">
-                        <input class="form-control" type="tel" name="customer_phone" placeholder="رقم الهاتف">
+                        <input class="form-control" type="text" value="{{ old('customer_address') }}" name="customer_address" placeholder="العنوان">
+                        @error('customer_address')
+                                <span class="text-danger">{{$message}}</span>
+                        @enderror 
                         </div>
                        
                     </div>
@@ -168,7 +193,11 @@
         @endforeach 
 
         </div>
-    </div>
+        </div>
+        <div class="justify-content-center d-flex mt-2">
+                    {{$items->links()}}
+        </div>
+    
 </div>
 <!-- end item section -->
 @else

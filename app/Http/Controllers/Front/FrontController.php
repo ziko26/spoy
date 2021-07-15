@@ -56,7 +56,7 @@ class FrontController extends Controller
         return view('front.brand')->with([
             'brand' => $brand,
             'category' => Category::where('id', '=', $brand->category_id)->get(),
-            'items' => Item::where('user_id', '=', $brand->user_id)->get(),
+            'items' => Item::where('user_id', '=', $brand->user_id)->paginate(9),
         ]);
     }
 
@@ -66,7 +66,7 @@ class FrontController extends Controller
             'brands' => Brand::whereHas('user', function($q){
                 $q->where('active', '=', 1);
             })->where('category_id', '=', $category->id)
-                             ->get(),
+                             ->paginate(9),
         ]);
     }
 }

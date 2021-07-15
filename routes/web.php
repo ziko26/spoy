@@ -25,7 +25,7 @@ Route::group(['namespace' => 'User'], function(){
 });
 
 
-    Route::group(['namespace' => 'User','middleware' => 'auth:web'], function(){
+Route::group(['namespace' => 'User','middleware' => 'auth:web'], function(){
 
         // Dashboard route
             Route::get('/admin', 'DashboardController@index')->name('user.dashboard');
@@ -65,7 +65,7 @@ Route::group(['namespace' => 'User'], function(){
     
         // logout route
             Route::get('admin/logout', 'UserController@userLogout')->name('user.logout');
-    });
+});
 
 
     Route::group(['namespace' => 'User' ,'middleware' => 'guest:web'], function(){
@@ -74,4 +74,11 @@ Route::group(['namespace' => 'User'], function(){
         Route::get('admin/register', 'UserController@showRegister')->name('show.user.register');
         Route::post('admin/register', 'UserController@register')->name('user.register');
     
+    });
+
+    Route::fallback(function () {
+        abort(404);
+    }); 
+    Route::fallback(function () {
+        return view('layouts.404');
     });

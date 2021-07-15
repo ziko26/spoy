@@ -13,7 +13,12 @@ class FrontController extends Controller
 {
     public function index(){
         return view('front.index')->with([
-            'brands' => Brand::all(),
+            'brands' => Brand::whereHas('user', function($q){
+                                    $q->where('active', '=', 1);
+                             })->get(),
+            'lastBrands' => Brand::whereHas('user', function($q){
+                                     $q->where('active', '=', 1);
+                             })->latest()->limit(6)->get(),
             'categories' => Category::all()
         ]);
     }

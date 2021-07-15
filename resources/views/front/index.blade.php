@@ -83,6 +83,31 @@
 
     </div>
 </div>
+ <!-- start brands section -->
+ <div class="brands"> 
+        <div class="container">
+            <h2 class="text-right mb-5">مركات تجارية مختارة :</h2>
+            <div class="row">
+            @foreach($lastBrands as $brand)
+                <div class="col-sm-6 col-md-4">
+                <a href="{{route('front.brand', $brand->slug)}}">
+                <div class="card">
+                    <img class="card-img-top" src="{{asset('public/images/user/brand/'.$brand->image)}}" alt="{{$brand->name}}">
+                    <div class="card-body">
+                    <h3 class="text-center">{{$brand->name}}</h3>
+                    <div class="d-flex justify-content-center align-items-center info">
+                    <span class="date">{{\Carbon\Carbon::parse($brand->created_at)->format('Y/m/d')}} <i class="ft-calendar"></i></span>
+                    <span class="city"><i class="ft-map-pin"></i> {{$brand->user->city->name}}</span>
+                    </div>
+                    </div>
+                </div>
+                </a>    
+                </div>
+            @endforeach    
+            </div>
+        </div>
+        </div>
+        <!-- end brands section -->
 @endif
 <!-- end categories section -->
 @endsection

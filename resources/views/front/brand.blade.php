@@ -45,6 +45,7 @@
     </div>
 </div>
 <!-- end brand section -->
+@if($brand->user->active == 1)
 <!-- start item section -->
 <div class="item">
     <div class="container">
@@ -170,5 +171,8 @@
     </div>
 </div>
 <!-- end item section -->
+@else
+<p class="lead text-center mb-4">هذا النشاط التجاري غير مفعل</p>
+@endif
 @endsection
 

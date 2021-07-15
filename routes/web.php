@@ -16,7 +16,7 @@ Route::group(['namespace' => 'Front'], function(){
     Route::get('/', 'FrontController@index')->name('front.index');
     Route::get('/contact-us', 'FrontController@contact')->name('front.contact');
     Route::post('/contact-us', 'FrontController@contact')->name('front.contact.post');
-    Route::get('/brand/{brand}', 'FrontController@brand')->middleware('ActiveUser')->name('front.brand');
+    Route::get('/brand/{brand}', 'FrontController@brand')->name('front.brand');
     Route::get('/collections/{category}', 'FrontController@categories')->name('front.categories');
     Route::get('/search', 'FrontController@search')->name('front.search');
 });

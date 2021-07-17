@@ -2,28 +2,33 @@
   role="navigation" data-menu="menu-wrapper">
     <div class="navbar-container main-menu-content container center-layout" data-menu="menu-container">
       <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class="dropdown nav-item" data-menu="dropdown">
-          <a class="dropdown-toggle nav-link" href="{{route('admin.dashboard')}}" data-toggle="dropdown"><i class="ft-home"></i>
+        <li>
+          <a class="nav-link" href="{{route('admin.dashboard')}}"><i class="ft-home"></i>
             <span>Dashboard</span>
           </a>
         </li>
         <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="ft-users"></i><span>Users</span></a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="#" data-toggle="dropdown"><i class="ft-user-plus"></i>Add User</a>
+              <a class="dropdown-item" href="#" data-toggle="dropdown"></i>All Users</a>
             </li>
-            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
-              <a class="dropdown-item" href="#" data-toggle="dropdown"><i class="ft-user-plus"></i>Add User</a>
+            <li class="dropdown">
+              <a class="dropdown-item" href="#" data-toggle="dropdown"></i>Add User</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="ft-file"></i><span>Pages</span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="{{route('admin.pages')}}" data-toggle="dropdown"></i>All Pages</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-item" href="{{route('admin.pages.create')}}" data-toggle="dropdown"></i>Add Page</a>
             </li>
           </ul>
         </li>
         <li class="dropdown nav-item" data-menu="dropdown">
-          <a class="dropdown-toggle nav-link" href="{{route('admin.dashboard')}}" data-toggle="dropdown"><i class="ft-home"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li class="dropdown nav-item" data-menu="dropdown">
-          <a class="dropdown-toggle nav-link" href="{{route('admin.dashboard')}}" data-toggle="dropdown"><i class="ft-home"></i>
+          <a class="dropdown-toggle nav-link" href="" data-toggle="dropdown"><i class="ft-home"></i>
             <span>Dashboard</span>
           </a>
         </li>
@@ -48,16 +53,9 @@
           </ul>
         </li>
         <li class="dropdown nav-item" data-menu="dropdown">
-          <a class="dropdown-toggle nav-link" href="{{route('admin.dashboard')}}" data-toggle="dropdown"><i class="ft-home"></i>
+          <a class="dropdown-toggle nav-link" href="" data-toggle="dropdown"><i class="ft-home"></i>
             <span>Dashboard</span>
           </a>
-        </li>
-        <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="la la-folder-open"></i><span>General</span></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i class="la la-paint-brush"></i>Color Palette</a>
-            </li>
-          </ul>
         </li>
       </ul>
     </div>

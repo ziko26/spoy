@@ -68,5 +68,24 @@ class CitiesController extends Controller
     
             return redirect()->route('admin.cities')->with(['erorr' => 'حدث خطأ ما، المرجو إعادة المحاولة!']);
         }
-    } 
+    }
+    
+    public function delete($id){
+        try{
+            $city = City::find($id);
+
+            if(!$city){
+                return redirect()->route('admin.cities');
+            }
+    
+            // delete from db
+            $city->delete();
+
+            return redirect()->route('admin.cities')->with(['success' => 'The city deleted succesfly']);
+
+        }catch(\Exception $ex){
+
+            return redirect()->route('admin.cities')->with(['erorr' => 'Something went wrong!']);
+        }
+    }
 }

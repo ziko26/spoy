@@ -1,5 +1,5 @@
 @extends('layouts.front.front')
-@section('title', 'النشاط التجاري')
+@section('title', e($brand->name))
 @section('content')
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">

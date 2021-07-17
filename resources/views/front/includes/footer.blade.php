@@ -9,8 +9,9 @@
       <div class="col-md-3 col-sm-6 res">
         <h5>الصفحات</h5>
         <ul class="list-unstyled">
-          <li><a href="#">سياسة الخصوصية</a></li>
-          <li><a href="#">سياسة الإستخدام</a></li>
+        @foreach($pages as $page)
+        <li><a href="{{route('front.pages', $page->slug)}}">{{$page->page_name}}</a></li>
+        @endforeach
           <li><a href="{{route('front.contact')}}">إتصل بنا</a></li>
         </ul>  
       </div>

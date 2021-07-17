@@ -13,7 +13,7 @@
      // Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
         
         $headers = 'From: ' . $mail . '\r\n';
-        $myEmail = 'contact@pubstudiopro.ma';
+        $myEmail = 'contact@spoy.ma';
         $subject = 'Contact Form';
             mail($myEmail, $subject, $msg, $headers);
             $user = '';

@@ -7,12 +7,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class AdminController extends Controller
 {
 
     public function index(){
-        return view('admin.dashboard');
+       $users = User::all();
+       $ActiveUsers = User::where('active',1)->get();
+       return view('admin.dashboard')->with([
+           'users' => $users,
+           'ActiveUsers' => $ActiveUsers
+       ]);
     }
 
     public function showLogin(){

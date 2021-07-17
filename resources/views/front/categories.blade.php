@@ -1,5 +1,5 @@
 @extends('layouts.front.front')
-@section('title', 'التصنيفات')
+@section('title', e($category->name))
 @section('content')
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">

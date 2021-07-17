@@ -5,7 +5,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{route('front.index')}}">الصفحة الرئيسية</a></li>
     <li class="breadcrumb-item active" aria-current="page"> {{$category->name}}</li>
-  </ol>
+</ol>
 </nav>
 <!-- start brands section -->
 <div class="brands"> 

@@ -20,7 +20,7 @@ class PagesController extends Controller
     }
     
     public function store(PageRequest $request){
-        try{
+        // try{
             //add data
             Page::create([
                 'page_name' => $request->page_name,
@@ -28,11 +28,11 @@ class PagesController extends Controller
                 'page_content' => $request->page_content,
             ]);
             return redirect()->route('admin.pages')->with(['success' => 'The Page added successfly']);
-        }catch(\Exception $ex){
+        // }catch(\Exception $ex){
     
-          return redirect()->route('admin.pages')->with(['erorr' => 'Something went wrong!']);
+        //   return redirect()->route('admin.pages')->with(['erorr' => 'Something went wrong!']);
     
-        }
+        // }
     }
     
     public function edit($id){

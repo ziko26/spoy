@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="بيع، المنتوجات، العلامات التجارية، المحلات.">
     <meta name="author" content="Zakaria bouhanda">
-    <meta name="google-site-verification" content="HRRVsz5-HS2Vh4w1PlNAOyZ1II3GlUBWZW8MqkC7elI" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <title>@yield('title')</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/images/icon.png')}}">
     <!-- END Page Level CSS-->
@@ -27,6 +27,14 @@
             font-family: 'Cairo', sans-serif;
         }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXWRK9203T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PXWRK9203T');
+    </script>
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////-->

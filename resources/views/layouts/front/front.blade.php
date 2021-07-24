@@ -27,14 +27,16 @@
             font-family: 'Cairo', sans-serif;
         }
     </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXWRK9203T"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156793479-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-PXWRK9203T');
-    </script>
+  gtag('config', 'UA-156793479-2');
+</script>
+
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////-->

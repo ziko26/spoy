@@ -84,7 +84,7 @@
       google.charts.setOnLoadCallback(drawVisualization);
 
       function drawVisualization() {
-        var visitors = <?php echo $visitors ?>;
+        
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
           ['Date', 'Visitors', 'Page Viwes',],

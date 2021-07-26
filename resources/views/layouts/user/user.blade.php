@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/admin/vendors/css/charts/chartist.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/admin/vendors/css/forms/selects/select2.min.css')}}">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <link rel="stylesheet" type="text/css"
           href="{{asset('public/assets/admin/vendors/css/charts/chartist-plugin-tooltip.css')}}">

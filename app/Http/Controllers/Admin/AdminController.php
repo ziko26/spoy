@@ -19,27 +19,15 @@ class AdminController extends Controller
        $users = User::all();
        $ActiveUsers = User::where('active',1)->get();
        //Retrieve Most Visited Pages
-        $pages = Analytics::fetchMostVisitedPages(Period::days(1));
+        $pages = Analytics::fetchMostVisitedPages(Period::days(7));
         //retrieve visitors and pageview data for the current day and the last fifteen days
-        $visitors = Analytics::fetchVisitorsAndPageViews(Period::days(15));
+        $visitors = Analytics::fetchVisitorsAndPageViews(Period::days(7));
         // Retrieve Total Visitors and Page Views
-        $total_visitors = Analytics::fetchTotalVisitorsAndPageViews(Period::days(7));
-        //retrieve sessions and pageviews with yearMonth dimension since 1 year ago
-        $analyticsData = Analytics::performQuery(
-        Period::years(1),
-            'ga:sessions',
-            [
-                'metrics' => 'ga:sessions, ga:pageviews',
-                'dimensions' => 'ga:yearMonth'
-            ]
-        );
        return view('admin.dashboard')->with([
            'users' => $users,
            'ActiveUsers' => $ActiveUsers,
            'pages' => $pages,
            'visitors' => $visitors,
-           'total_visitors' => $total_visitors,
-           'analyticsData' => $analyticsData
        ]);
     }
 

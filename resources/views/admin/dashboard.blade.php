@@ -47,26 +47,65 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-12">
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-body">
-                    <div class="media d-flex">
-                      <div class="align-self-center">
-                        <i class="icon-check success font-large-2 float-left"></i>
-                      </div>
-                      <div class="media-body text-right">
-                        <h3>{{$visitors}}</h3>
-                        <span>Visitores</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
         </section>
+
+        <div id="chart_div" style="width: 950px; height: 500px;"></div>
         </div>
     </div>
-</div
+    <div class="card container">
+            <div class="card-body card-dashboard">
+                <table
+                    class="table table-striped display table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Url</th>
+                        <th>Page Name</th>
+                        <th>Number Of Visitors</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                     
+                      @foreach($pages as $page)
+                      <tr> 
+                          <td>{{$page['url']}}</td>
+                          <td>{{$page['pageTitle']}}</td>
+                          <td>{{$page['pageViews']}}</td>
+                      </tr>   
+                      @endforeach    
+                     
+                    </tbody>
+                </table>
+            </div>
+            </div>
+</div>
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        var visitors = <?php echo $visitors ?>;
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Visitors', 'Page Viwes',],
+          @php
+              foreach($visitors as $visitor) {
+                  echo "['".$visitor['date']."', ".$visitor['visitors'].", ".$visitor['pageViews']."],";
+              }
+          @endphp
+        ]);
+
+        var options = {
+          title : 'Analytics For This week',
+          vAxis: {title: 'Numbers'},
+          hAxis: {title: 'Date'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 
 @endsection

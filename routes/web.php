@@ -59,7 +59,8 @@ Route::group(['namespace' => 'User','middleware' => 'auth:web'], function(){
         Route::get('/admin/password/edit/{id}', 'InformationsController@password')->name('user.password.edit');
         Route::post('/admin/password/update/{id}', 'InformationsController@updatePassword')->name('user.password.update');
 
-    
+        // insights Route
+        Route::get('/admin/insights', 'InsightsController@index')->name('user.insights');
         // activate account routes
             Route::get('admin/activate/{code}', 'ActivationController@activateUserAccount')->name('user.activate');
             Route::get('admin/resend/{email}', 'ActivationController@resendActivationCode')->name('user.resend');

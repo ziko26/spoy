@@ -51,6 +51,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/admin/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/css/dashboard.css')}}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- END Custom CSS-->
     @yield('style')
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
@@ -87,6 +88,7 @@ data-open="click" data-menu="horizontal-menu" data-col="2-columns">
 <script src="{{asset('public/assets/admin/vendors/js/forms/select/select2.full.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('public/assets/admin/js/scripts/forms/select/form-select2.js')}}" type="text/javascript"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
 
 <!-- BEGIN PAGE VENDOR JS-->
 <script src="{{asset('public/assets/admin/vendors/js/charts/chart.min.js')}}" type="text/javascript"></script>

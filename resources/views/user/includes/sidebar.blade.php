@@ -42,10 +42,9 @@
                 </a>
             </li>
 
-            <li class="disabled nav-item">
-                <a><i class="ft-bar-chart-2"></i>
+            <li class="nav-item {{  Request::routeIs('user.insights') ? 'active' : '' }}">
+                <a href="{{route('user.insights')}}"><i class="ft-bar-chart-2"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">Insights</span>
-                    <span class="badge badge-primary  badge-pill float-right">Comming Soon</span>
                 </a>
             </li>
 

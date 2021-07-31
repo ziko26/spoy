@@ -41,6 +41,14 @@ Route::group(['namespace' => 'Admin','middleware' => 'auth:admin'], function(){
     Route::post('/administration/pages/update/{id}', 'PagesController@update')->name('admin.pages.update');
     Route::get('/administration/pages/delete/{id}', 'PagesController@delete')->name('admin.pages.delete');
 
+     // cities routes
+     Route::get('administration/users', 'UsersController@index')->name('admin.users');
+     Route::get('/administration/users/create', 'UsersController@create')->name('admin.users.create');
+     Route::post('/administration/users/store', 'UsersController@store')->name('admin.users.store');
+     Route::get('/administration/users/edit/{id}', 'UsersController@edit')->name('admin.users.edit');
+     Route::post('/administration/users/update/{id}', 'UsersController@update')->name('admin.users.update');
+     Route::get('/administration/users/delete/{id}', 'UsersController@delete')->name('admin.users.delete');
+
      // logout route
      Route::get('administration/logout', 'AdminController@adminLogout')->name('admin.logout');
 });

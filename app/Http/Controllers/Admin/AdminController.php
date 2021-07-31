@@ -22,7 +22,6 @@ class AdminController extends Controller
         $pages = Analytics::fetchMostVisitedPages(Period::days(7));
         //retrieve visitors and pageview data for the current day and the last fifteen days
         $visitors = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-        // Retrieve Total Visitors and Page Views
        return view('admin.dashboard')->with([
            'users' => $users,
            'ActiveUsers' => $ActiveUsers,

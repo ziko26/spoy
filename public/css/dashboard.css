@@ -19,14 +19,14 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content 
     border-radius: 5px;
     font-weight: 600;
 }
-.delevraid{
+.delevraid, .user-active{
     background: #9de29d;
     color: #095a09;
     padding: 3px 8px;
     border-radius: 5px;
     font-weight: 600;
 }
-.canceled{
+.canceled, .user-notActive{
     background: #efb5b5;
     color: #9c1414;
     padding: 3px 8px;

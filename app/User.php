@@ -30,6 +30,16 @@ class User extends Authenticatable
 
     ];
 
+    public function getActive(){
+ 
+        if($this->active == 1){
+         return '<span class="user-active">Active</span>';
+        }elseif($this->active == 0){
+          return '<span class="user-notActive">inActive</span>';
+        }
+
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

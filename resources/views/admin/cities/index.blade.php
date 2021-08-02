@@ -15,6 +15,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Slug</th>
+                        <th>Number of users</th>
                         <th>Creation Date</th>
                         <th>Action</th>
                     </tr>
@@ -24,6 +25,7 @@
                       <tr>                       
                           <td>{{$city->name}}</td>
                           <td>{{$city->slug}}</td>
+                          <td>{{count($city->users)}}</td>
                           <td>{{\Carbon\Carbon::parse($city->created_at)->format('d/m/Y')}}</td>
                           <td class="d-flex justify-content-center align-items-center">
                             <a class="text-success mr-2" href="{{route('admin.cities.edit', $city->id)}}">

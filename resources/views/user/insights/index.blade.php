@@ -65,15 +65,13 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var date =  Date();
           var YesterdayOrders = <?php echo count($YesterdayOrders) ?>;
           var CurrentOrders = <?php echo count($CurrentOrders) ?>;
 
         var data = google.visualization.arrayToDataTable([
-          ['Time', 'Sales'],
-          ['last week',  6],
-          ['yes',  YesterdayOrders],
-          ['today',  CurrentOrders],
+          ['Date', 'Orders'],
+          ['Yesterday',  YesterdayOrders],
+          [new Date().toDateString(),  CurrentOrders],
         ]);
 
         var options = {

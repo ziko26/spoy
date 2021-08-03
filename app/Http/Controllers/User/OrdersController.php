@@ -31,6 +31,7 @@ class OrdersController extends Controller
                 'customer_phone' => $request->customer_phone,
                 'customer_address' => $request->customer_address,
                 'item_id' => $id,
+                'item_price' => $item->price,
                 'user_id' => $item->user->id
     
             ]);

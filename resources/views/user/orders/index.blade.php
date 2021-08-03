@@ -28,7 +28,7 @@
                       <tr> 
                           <td>{{$order->item->name}}</td>
                           <td>{{\Carbon\Carbon::parse($order->created_at)->format('d/m/Y')}}</td>
-                          <td>{{$order->item->price}}</td>
+                          <td>{{$order->item_price}}</td>
                           <td>{{$order->customer_name}}</td>
                           <td>{{$order->customer_phone}}</td>
                           <td>{!!$order->getStatut()!!}</td>

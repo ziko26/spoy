@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\User;
 
 class DashboardController extends Controller
@@ -21,13 +22,19 @@ class DashboardController extends Controller
         ->where('statut', 1)->get();
        $canceleds = Order::where('user_id', auth()->id())
         ->where('statut', 2)->get();
+       $todayEr = Order::where('user_id', auth()->id())
+        ->whereDay('created_at',  date('d'))->where('statut', 1)->sum('item_price');
+        $yesterdayEr = Order::where('user_id', auth()->id())
+        ->whereDay('created_at',  date('d') -1)->where('statut', 1)->sum('item_price');
        return view('user.dashboard')->with([
            'user' => $user,
            'brand' => $brand,
            'orders' => $orders,
            'NewOrders' => $Neworders,
            'delevraids' => $delevraids,
-           'canceleds' => $canceleds
+           'canceleds' => $canceleds,
+           'todayEr' => $todayEr,
+           'yesterdayEr' => $yesterdayEr,
        ]);
    }
 

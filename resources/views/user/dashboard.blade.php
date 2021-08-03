@@ -23,7 +23,7 @@
             <h2><i class="ft-box"></i> Orders</h2>
             </div>
           </div>
-          <div class="row" id="card-drag-area">
+          <div class="row">
             <div class="col-xl-3 col-lg-6 col-12">
               <div class="card">
                 <div class="card-content">
@@ -93,6 +93,47 @@
               </div>
             </div>
           </div>
+        </section>
+        <section>
+          <div class="row">
+            <div class="col-12 mt-3 mb-1">
+            <h2><i class="icon-wallet"></i> Erning</h2>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="align-self-center">
+                        <h3>Today :</h3>
+                      </div>
+                      <div class="media-body text-right">
+                        <h4>{{$todayEr}} MAD</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="align-self-center">
+                        <h3>Yesterday :</h3>
+                      </div>
+                      <div class="media-body text-right">
+                        <h4>{{$yesterdayEr}} MAD</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
         </section>
         </div>
     </div>

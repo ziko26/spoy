@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +12,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        Admin::create([
+            'fullName' => 'Administration',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin')
+        ]);
+
+      $cities =  [
+
+            [
+                'name' => 'Agadir',
+                'slug' => 'agadir'
+            ],
+            [
+                'name' => 'Casablanca',
+                'slug' => 'casablanca'
+            ],
+            [
+                'name' => 'Marakech',
+                'slug' => 'marakech'
+            ],
+          
+           
+        ];
+
+        DB::table('cities')->insert($cities);
     }
 }

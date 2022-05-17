@@ -24,7 +24,7 @@ class OrdersController extends Controller
 
         ]);
 
-        try{
+        // try{
             $item = Item::find($id);
             Order::create([
                 'customer_name' => $request->customer_name,
@@ -36,9 +36,9 @@ class OrdersController extends Controller
     
             ]);
             return redirect()->back();
-        }catch(\Exception $ex){  
-          return redirect()->back();
-        }
+        // }catch(\Exception $ex){  
+        //   return redirect()->back();
+        // }
        
     }
 

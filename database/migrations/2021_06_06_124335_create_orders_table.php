@@ -19,6 +19,8 @@ class CreateOrdersTable extends Migration
             $table->bigInteger("item_id")->unsigned();
             $table->string('customer_name');
             $table->string('customer_phone');
+            $table->string('customer_address');
+            $table->string('item_price');
             $table->tinyInteger('statut')->default(0)->unsigned();
             $table->timestamps();
             $table->foreign("user_id")

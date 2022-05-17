@@ -9,8 +9,8 @@
     </div>
     @endif
     @if(count($brand) == 0)
-    <div class="alert alert-danger">
-    Please Set up your Brand  <a href="{{route('user.brand.setup')}}"><strong>Here</strong></a>
+    <div class="alert alert-info">
+    Please Set up your Brand  <a class="text-white" href="{{route('user.brand.setup')}}"><strong>Here</strong></a>
     </div>
     @endif
     @include('user.includes.alerts.success')
@@ -97,7 +97,7 @@
         <section>
           <div class="row">
             <div class="col-12 mt-3 mb-1">
-            <h2><i class="icon-wallet"></i> Erning</h2>
+            <h2><i class="icon-wallet"></i> Earning</h2>
             </div>
           </div>
           <div class="row">
